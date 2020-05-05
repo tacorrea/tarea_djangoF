@@ -5,7 +5,7 @@ urlpatterns = [
     path('hamburguesa', HamburguesaAPIView.as_view()),
     path('hamburguesa/<int:id>', HamburguesaDetails.as_view()),
     path('ingrediente', IngredienteAPIView.as_view()),
-    path('ingrediente/<int:id>', IngredienteDetails.as_view()),
+    path('ingrediente/<int:id>', IngredienteDetails.as_view(), name='ingredientedetails'),
 
     path('generic/hamburguesa/<int:id>', GenericAPIView.as_view()),
     path('hamburguesa/<int:id>/ingrediente/<int:iid>', HamburguesaIngrediente.as_view()),
